@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'static/style.css' %}">
 </head>
 <body style="background-color:#41b3a3">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
@@ -13,7 +13,7 @@
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#e27d60;">
   <div class="container-fluid">
       <div class="col-6 col-md-6.5">
-    <a class="navbar-brand" href="index"><img src="{% static 'logo.png' %}" height="100px" width="300px"> </a></div>
+    <a class="navbar-brand" href="index"><img src="{% static 'static/logo.png' %}" height="100px" width="300px"> </a></div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -39,24 +39,42 @@
         <br><br>
 <form action="Dfinded" method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    <select>
-        <option disabled selected>Select department</option>
-        <option>Ortho</option>
-        <option>Psychology</option>
-        <option>Urology</option>
-        <option>Pathology</option>
-        <option>Homeo</option>
-        <option>Ayurveda</option>
+    <select name="district">
+        <option disabled selected>Select district</option>
+
+        <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+        <option value="Kollam">Kollam</option>
+        <option value="Alapuzha">Alapuzha</option>
+        <option value="Pathanamthitta">Pathanamthitta</option>
+        <option value="Kottayam">Kottayam</option>
+        <option value="Idukki">Idukki</option>
+        <option value="Ernamkulam">Ernamkulam</option>
+        <option value="Thrissur">Thrissur</option>
+        <option value="Palakkad">Palakkad</option>
+        <option value="Malappuram">Malappuram</option>
+        <option value="Kozhikode">Kozhikode</option>
+        <option value="Wayanad">Wayanad</option>
+        <option value="Kannur">Kannur</option>
+        <option value="Kasargod">Kasargod</option>
+
     </select>
     <br>
-     <select>
-        <option disabled selected>Select district</option>
-        <option>Thirivandram</option>
-        <option>Malappuram</option>
-        <option>Kozhikode</option>
-        <option>Kannur</option>
-        <option>Ernamkulam</option>
-        <option>Wayanad</option>
+     <select name="department">
+        <option disabled selected>Select department</option>
+        <option value="Ayurveda">Ayurveda </option>
+        <option value="Ophthalmologist">Ophthalmologist</option>
+        <option value="Pediatrician">Pediatrician</option>
+        <option value="Orthopedic Surgeon">Orthopedic Surgeon</option>
+        <option value="Urologist">Urologist</option>
+        <option value="Homeopathy Doctor">Homeopathy Doctor</option>
+        <option value="Diabetologist">Diabetologist</option>
+        <option value="Cardiologist">Cardiologist</option>
+        <option value="Psychiatrist">Psychiatrist</option>
+        <option value="General & Laparoscopic Surgeon">General & Laparoscopic Surgeon</option>
+        <option value="Psychologist">Psychologist</option>
+        <option value="General physician">General physician</option>
+        <option value="Gynecologist">Gynecologist</option>
+        <option value="Neurologist">Neurologist</option>
     </select>
     <br><br>
     <input type="submit" value="Find" style="border-color:black;border:solid 1px;border-radius:24px;color:white;background:#e27d60">

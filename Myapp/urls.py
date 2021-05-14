@@ -14,4 +14,5 @@ urlpatterns = [
     path('Dfinded', views.dfinded, name="Dfinded"),
     path('Hfinded', views.hfinded, name="Hfinded"),
     path('not', views.notfind, name='not find'),
+
 ]
