@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django .http import HttpResponse
-from . models import Doctors, Hospitals, Sikk
+from . models import Doctors, Hospital, Sikk
 def home(request):
     return render(request, 'index.html')
 def fDisease(request):
@@ -763,11 +763,10 @@ def dfinded(request):
     dis = request.POST['district']
     data = Doctors.objects.filter(district=dis, department=dep)
     return render(request, 'Dfinded.html', {'data':data})
-
-    return render(request, 'Dfinded.html')
-
 def hfinded(request):
-    return render(request, 'Hfinded.html')
+    dis = request.POST['district']
+    data = Hospital.objects.filter(district=dis)
+    return render(request, 'Hfinded.html', {'data':data})
 def notfind(request):
     return render(request, 'not.html')
 

@@ -1,9 +1,12 @@
 from django.db import models
-class Hospitals(models.Model):
+class Hospital(models.Model):
     district = models.CharField(max_length=30)
     hospital = models.CharField(max_length=100, primary_key=True)
     photo = models.FileField()
     details = models.CharField(max_length=300)
+    address = models.CharField(max_length=300)
+    phone = models.CharField(max_length=300)
+    emergency = models.CharField(max_length=300)
 class Doctors(models.Model):
     district = models.CharField(max_length=30)
     department = models.CharField(max_length=30)

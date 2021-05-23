@@ -39,12 +39,12 @@
         <br><br>
 <form action="Hfinded" method="post" enctype="multipart/form-data">
     {% csrf_token %}
-     <select>
+     <select name="district">
         <option disabled selected>Select district</option>
-        <option>Thirivandram</option>
+
         <option value="Thiruvananthapuram">Thiruvananthapuram</option>
         <option value="Kollam">Kollam</option>
-        <option value="Alapuzha">Alapuzha</option>
+        <option value="Alappuzha">Alappuzha</option>
         <option value="Pathanamthitta">Pathanamthitta</option>
         <option value="Kottayam">Kottayam</option>
         <option value="Idukki">Idukki</option>

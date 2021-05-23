@@ -35,6 +35,24 @@
     </div>
   </div>
 </nav>
+{% for i in data %}
+<div class="container">
+<center>
+    <h2 style="color:#123456"><b><u>{{i.hospital}}</u></b></h2>
+    <img class="img-fluid" src="{{i.photo.url}}" height="400" width="800">
 
+</center>
+<h5>{{i.hospital}},{{i.district}}</h5>
+<p>{{i.details}}</p>
+    <p><h6>Address: </h6>{{i.address}}</p>
+<h6>Phone: {{i.phone}}</h6>
+<h6>Emergency: {{i.emergency}}</h6>
+<hr>
+</div>
+{% endfor %}
+<center>
+<button style="border-radius:24px;background-color:#41b3a3"><a href="FindHospital" style="text-decoration:none;color:#000">Back</a> </button>
+<button style="border-radius:24px;background-color:#41b3a3"><a href="index" style="text-decoration:none;color:#000">Home</a> </button>
+</center>
 </body>
 </html>
