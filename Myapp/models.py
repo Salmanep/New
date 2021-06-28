@@ -22,4 +22,10 @@ class Sikk(models.Model):
     symptom2 = models.CharField(max_length=300)
     symptom3 = models.CharField(max_length=300)
     symptom4 = models.CharField(max_length=300)
+class User(models.Model):
+    First_name = models.CharField(max_length=50)
+    Last_name =models.CharField(max_length=50)
+    Email = models.EmailField()
+    Username = models.CharField(max_length=50)
+    Password = models.CharField(max_length=50)
 
